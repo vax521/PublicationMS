@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block title %}index{% endblock %}
+{% block body %}
+ <br/>
+<div>
+    <label type="label" class="label-info" >
+     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 载入鲍鱼参数图片
+    </label>
+     <form enctype="multipart/form-data">
+        <br>
+         <!--载入鲍鱼参数图片-->
+        <div class="file-loading">
+            <input id="file-0a" class="file" type="file" multiple data-min-file-count="1" value=" "/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">提交</button>
+        <button type="reset" class="btn btn-default">重置</button>
+    </form>
+</div>
+<br>
+     <br>
+    <!--文字识别结果-->
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+         <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>  文字识别结果
+        </h3>
+    </div>
+    <div class="panel-body">
+
+    </div>
+</div>
+ <br>
+    <br>
+        <!--鲍鱼年龄识别结果-->
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>  鲍鱼年龄
+        </h3>
+    </div>
+    <div class="panel-body">
+
+    </div>
+</div>
+<div class="floating-buttons">
+  <button type="button" class="btn btn-info" href=" ">
+     <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> 语音播报
+  </button>
+</div>
+{% endblock %}
