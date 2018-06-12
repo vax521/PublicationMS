@@ -1,5 +1,5 @@
 from SPARQLWrapper import SPARQLWrapper,JSON
-
+import json
 
 def query_director():
     sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
@@ -43,6 +43,7 @@ def query_movie():
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
+    # print(type(results)) 字典类型
     # all_movie = []
     # for result in results["results"]["bindings"]:
     #    all_movie.append(result)

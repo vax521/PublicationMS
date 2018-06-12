@@ -1,16 +1,21 @@
 import sys
-sys.path.append("E:/Code/PublicationMS/app")
-from flask import render_template , flash, redirect, request
+#  公司电脑
+# sys.path.append("E:/Code/PublicationMS/app")
+sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
+from flask import render_template, redirect, request,make_response, jsonify
 from app import app
 import retrieval
+import json
 
 
 @app.route('/search', methods=['POST', 'GET'])
 def search():
     option = request.values.get("optionsRadios")
     input_thing = request.values.get("input")
-    result = retrieval.query_movie()
-    return str()
+    data = retrieval.query_movie()
+    print("data type:", type(data))
+    response = make_response(render_template("show_result.html", data=data))
+    return response
 
 
 @app.route('/')

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
-{% block title %}检索{% endblock %}
+{% block title %}result{% endblock %}
 {% block body %}
-    <div class="container">
+<div class="container">
         <form class="navbar-form navbar-left" role="search"
               id="search_form" action="{{ url_for('search')}}" method="post">
                 <div class="radio-inline">
@@ -29,4 +29,27 @@
         </form>
     </div>
 
+    <div class="container-fluid">
+    <table border="1" class='table  table-striped table-hover' >
+        {% with data = data %}
+            {% if data %}
+                <tr>
+                    {% for movie_name in data['head']['vars'] %}
+                        <th>{{ movie_name }} </th>
+                    {% endfor %}
+{#                {{ data }}#}
+                </tr>
+
+                    {% for movie in data['results']['bindings'] %}
+                        <tr>
+                            <th>{{ movie['filmTitle']['value'] }}</th>
+                            <th>{{ movie['actorName']['value'] }}</th>
+                            <th>{{ movie['producerName']['value'] }}</th>
+                        </tr>
+                    {% endfor %}
+
+            {% endif %}
+        {% endwith %}
+      </table>
+    </div>
 {% endblock %}
