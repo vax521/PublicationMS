@@ -1,16 +1,22 @@
-from flask import render_template , flash, redirect
+import sys
+sys.path.append("E:/Code/PublicationMS/app")
+from flask import render_template , flash, redirect, request
 from app import app
+import retrieval
+
+
+@app.route('/search', methods=['POST', 'GET'])
+def search():
+    option = request.values.get("optionsRadios")
+    input_thing = request.values.get("input")
+    result = retrieval.query_movie()
+    return str()
 
 
 @app.route('/')
-@app.route('/search')
-def search():
-    return render_template("search.html")
-
-
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("search.html")
 
 
 @app.route('/greet')
