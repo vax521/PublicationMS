@@ -1,5 +1,32 @@
 from SPARQLWrapper import SPARQLWrapper,JSON
-import json
+
+
+"""
+ 负责检索功能实现的脚本
+"""
+
+
+def query_movie_by_name():
+    sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
+    query = """
+PREFIX m: <http://data.linkedmdb.org/resource/movie/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?dir_name ?actor_name ?writer_name  WHERE {
+  ?film rdfs:label "Lost in Translation";
+        m:director ?dir;
+        m:actor    ?actor;
+        m:writer   ?writer.
+        
+       ?dir  m:director_name ?dir_name.
+       ?actor m:actor_name   ?actor_name.
+       ?writer m:writer_name ?writer_name.
+}
+"""
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    return results
+
 
 def query_director():
     sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
@@ -23,7 +50,7 @@ def query_director():
     return all_movie
 
 
-def query_movie():
+def query_movie_by_director():
     sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
     query = """
    PREFIX m: <http://data.linkedmdb.org/resource/movie/>

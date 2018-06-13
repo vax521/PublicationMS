@@ -5,14 +5,17 @@ sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
 from flask import render_template, redirect, request,make_response, jsonify
 from app import app
 import retrieval
+import recommend
 import json
 
 
 @app.route('/search', methods=['POST', 'GET'])
 def search():
+    # 搜索范围判断条件
     option = request.values.get("optionsRadios")
     input_thing = request.values.get("input")
-    data = retrieval.query_movie()
+    # data = retrieval.query_movie_by_name()
+    data = retrieval.query_movie_by_director()
     print("data type:", type(data))
     response = make_response(render_template("show_result.html", data=data))
     return response

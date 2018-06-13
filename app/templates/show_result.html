@@ -1,27 +1,27 @@
 {% extends 'layout.html' %}
 {% block title %}result{% endblock %}
 {% block body %}
-<div class="container">
+    <div class="container">
         <form class="navbar-form navbar-left" role="search"
-              id="search_form" action="{{ url_for('search')}}" method="post">
-                <div class="radio-inline">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1"
-                               value="option1" checked> Book
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2"
-                               value="option2"> Movie
-                    </label>
-                </div>
-                <div class="radio-inline">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios3"
-                               value="option3"> Game
-                    </label>
-                </div>
+              id="search_form" action="{{ url_for('search') }}" method="post">
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1"
+                           value="option1" checked> Book
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2"
+                           value="option2"> Movie
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3"
+                           value="option3"> Game
+                </label>
+            </div>
             <div class="form-group form-inline">
                 <input type="text" class="form-control" id="input" name="input" placeholder="Search">
             </div>
@@ -30,26 +30,32 @@
     </div>
 
     <div class="container-fluid">
-    <table border="1" class='table  table-striped table-hover' >
-        {% with data = data %}
-            {% if data %}
-                <tr>
-                    {% for movie_name in data['head']['vars'] %}
-                        <th>{{ movie_name }} </th>
-                    {% endfor %}
-{#                {{ data }}#}
-                </tr>
-
-                    {% for movie in data['results']['bindings'] %}
+        <div class="col-md-8">
+            <table border="1" class='table  table-striped table-hover'>
+                {% with data = data %}
+                    {% if data %}
                         <tr>
-                            <th>{{ movie['filmTitle']['value'] }}</th>
-                            <th>{{ movie['actorName']['value'] }}</th>
-                            <th>{{ movie['producerName']['value'] }}</th>
+                            {% for column_name in data['head']['vars'] %}
+                                <th>{{ column_name }} </th>
+                            {% endfor %}
                         </tr>
-                    {% endfor %}
 
-            {% endif %}
-        {% endwith %}
-      </table>
+                        {% for info in data['results']['bindings'] %}
+                            <tr>
+                           {% for column_name in data['head']['vars'] %}
+                               <th>{{ info[column_name]['value'] }}</th>
+                           {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="alert-info text-center">
+                <h3>猜你喜欢</h3>
+            </div>
+        </div>
     </div>
+
 {% endblock %}
