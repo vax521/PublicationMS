@@ -56,7 +56,19 @@
                 <h3>猜你喜欢</h3>
             </div>
             <div class="info">
-                <p>{{ recomendation }}</p>
+                <table border="1" class='table  dataTables_info'>
+                   {% with data = recomendation %}
+                    {% if data %}
+                        {% for info in data['results']['bindings'] %}
+                            <tr>
+                           {% for column_name in data['head']['vars'] %}
+                               <th>{{ info[column_name]['value'] }}</th>
+                           {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                </table>
             </div>
         </div>
     </div>

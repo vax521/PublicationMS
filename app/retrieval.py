@@ -1,13 +1,13 @@
-from SPARQLWrapper import SPARQLWrapper,JSON
-
+import sys
+#  公司电脑
+# sys.path.append("E:/Code/PublicationMS/app")
+sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
+from sparql_tools import imdb_sparql, dbpedia_sparql, sparql_runner
 
 """
  负责检索功能实现的脚本
 """
-
-
 def query_movie_by_name():
-    sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
     query = """
 PREFIX m: <http://data.linkedmdb.org/resource/movie/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -22,18 +22,13 @@ SELECT DISTINCT ?dir_name ?actor_name ?writer_name  WHERE {
        ?writer m:writer_name ?writer_name.
 }
 """
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    return results
+    return sparql_runner(imdb_sparql, query)
 
 
 def query_director():
-    sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
     query = """
         PREFIX m: <http://data.linkedmdb.org/resource/movie/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
         SELECT ?filmTitle ?writer WHERE {
              ?film rdfs:label ?filmTitle.
              ?film m:director ?dir.
@@ -41,17 +36,10 @@ def query_director():
              ?film  m:director_name "Sofia Coppola".
             }
         """
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    all_movie = []
-    for result in results["results"]["bindings"]:
-        all_movie.append(result)
-    return all_movie
+    return sparql_runner(imdb_sparql, query)
 
 
 def query_movie_by_director():
-    sparql = SPARQLWrapper("http://data.linkedmdb.org/sparql")
     query = """
    PREFIX m: <http://data.linkedmdb.org/resource/movie/>
    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -67,11 +55,4 @@ def query_movie_by_director():
      ?producer m:producer_name ?producerName.   
 }
     """
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    # print(type(results)) 字典类型
-    # all_movie = []
-    # for result in results["results"]["bindings"]:
-    #    all_movie.append(result)
-    return results
+    return sparql_runner(imdb_sparql, query)
