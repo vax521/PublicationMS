@@ -8,6 +8,7 @@
           <option value="app.*" />
           <option value="retrieval" />
           <option value="SPARQLWrapper.SPARQLWrapper" />
+          <option value="recommend" />
         </list>
       </option>
     </inspection_tool>
