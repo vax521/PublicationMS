@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AlaloneAgeRecognization.iml" filepath="$PROJECT_DIR$/.idea/AlaloneAgeRecognization.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PublicationMS.iml" filepath="$PROJECT_DIR$/.idea/PublicationMS.iml" />
     </modules>
   </component>

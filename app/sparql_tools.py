@@ -15,3 +15,14 @@ def sparql_runner(sparql=dbpedia_sparql, query=''):
     results = sparql.query().convert()
     # 返回json数据
     return results
+
+
+# 处理返回的dict数据
+def result_processing(results):
+    finished_product = {}
+    for item in results['head']['vars']:
+        a = set()
+        for row in results['results']['bindings']:
+            a.add(row[item]['value'])
+        finished_product[item] = a
+    return finished_product
