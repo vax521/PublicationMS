@@ -15,7 +15,7 @@ def query_movie_by_name(name=''):
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX dc: <http://purl.org/dc/terms/>
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        SELECT  ?dir_name ?actor_name ?writer_name ?date ?country_name ?runtime ?page WHERE {
+        SELECT  ?dir_name ?actor_name ?writer_name ?date ?runtime ?page WHERE {
           ?film rdfs:label '"""+name+"""';
                 m:director ?dir;
                 m:actor    ?actor;
@@ -28,8 +28,6 @@ def query_movie_by_name(name=''):
                ?dir  m:director_name ?dir_name.
                ?actor m:actor_name   ?actor_name.
                ?writer m:writer_name ?writer_name.
-               ?country rdfs:label ?country_name.
-               
         }
         """
     results = sparql_runner(imdb_sparql, query)

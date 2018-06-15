@@ -41,7 +41,7 @@
                         {% for key in data %}
                             <tr>
                                 <td>{{ key }}</td>
-                                <td>{% for item in data[key] %} {{ item }}, {% endfor %}</td>
+                                <td>{% for item in data[key] %} {{ item }} | {% endfor %}</td>
                             </tr>
                         {% endfor %}
                     {% else %}
