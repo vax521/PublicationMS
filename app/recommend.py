@@ -1,8 +1,8 @@
 import sys
 #  公司电脑
-sys.path.append("E:/Code/PublicationMS/app")
-# sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
-from sparql_tools import imdb_sparql, dbpedia_sparql, sparql_runner
+# sys.path.append("E:/Code/PublicationMS/app")
+sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
+from sparql_tools import *
 
 query_movie_dirBySofia = """
 PREFIX m: <http://data.linkedmdb.org/resource/movie/>
@@ -58,3 +58,28 @@ def recommand_by_movie_name(name=""):
     """
     print(query)
     return sparql_runner(imdb_sparql, query)
+
+
+def recommand_by_most_same(name=""):
+    """
+     基于数据相似性的推荐
+    :param name: 资源名
+    :return:
+    """
+    query = """
+     SELECT  ?label
+     WHERE {
+         dbr:"""+name+""" dct:subject ?o.
+         ?movie dct:subject ?o.
+         ?movie rdfs:label ?label.
+         FILTER(?movie != dbr:"""+name+""").
+    }
+    GROUP BY ?movie ?label
+    ORDER BY DESC(COUNT(?movie))
+    LIMIT 3
+    """
+    print("推荐语句：")
+    print(query)
+    results = sparql_runner(dbpedia_sparql, query)
+    recommands = recommand_result_processing(results)
+    return recommands

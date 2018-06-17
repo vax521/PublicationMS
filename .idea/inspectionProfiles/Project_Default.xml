@@ -9,6 +9,7 @@
           <option value="retrieval" />
           <option value="SPARQLWrapper.SPARQLWrapper" />
           <option value="recommend" />
+          <option value="data_visualization" />
         </list>
       </option>
     </inspection_tool>
