@@ -14,9 +14,9 @@ def search():
     # 搜索范围判断条件
     option = request.values.get("optionsRadios")
     inputs = request.values.get("input")
-    # data = retrieval.query_movie_by_name(inputs)
+    data = retrieval.query_videogame_by_name(name=inputs.replace(" ", "_"))
     # data = retrieval.query_movie_by_name(name=inputs)
-    data = retrieval.query_book_by_name(name=inputs.replace(" ", "_"))
+    # data = retrieval.query_book_by_name(name=inputs.replace(" ", "_"))
     recomendation = recommend.recommand_by_most_same(name=inputs.replace(" ", "_"))
     print("data type:", type(data))
     response = make_response(render_template("show_result.html",

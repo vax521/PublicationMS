@@ -49,10 +49,11 @@
                 <table border="1" class='table  dataTables_info'>
                     {% with data = recomendation %}
                         {% if data %}
-                            {% for info in data %}
-                                <tr>
-                                    <th>{{ info }}</th>
-                                </tr>
+                            {% for key in data %}
+                                    <tr>
+                                        <td>{{ key }}</td>
+                                        <td>{{ data[key] }}</td>
+                                    </tr>
                             {% endfor %}
                         {% else %}
                             <p class="alert">查询结果为空！</p>

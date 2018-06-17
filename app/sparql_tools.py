@@ -30,10 +30,12 @@ def show_result_processing(results):
 
 # 处理 推荐模块返回的dict数据，只抽取 label 字段
 def recommand_result_processing(results):
-    recommands=[]
+
+    result_processed = {}
     for result in results["results"]["bindings"]:
-            recommands.append(result['label']['value'])
-    return recommands
+        result_processed[result['name']['value']] = result['abstract']['value']
+    print(result_processed)
+    return result_processed
 
 
 #  处理数据可视化模块的数据 返回 value类型为list的字典

@@ -67,14 +67,15 @@ def recommand_by_most_same(name=""):
     :return:
     """
     query = """
-     SELECT  ?label
+     SELECT   ?name ?abstract
      WHERE {
          dbr:"""+name+""" dct:subject ?o.
          ?movie dct:subject ?o.
-         ?movie rdfs:label ?label.
-         FILTER(?movie != dbr:"""+name+""").
+         ?movie foaf:name ?name.
+         ?movie dbo:abstract ?abstract.
+         FILTER(?movie != dbr:"""+name+""" && LANG(?abstract)="zh").
     }
-    GROUP BY ?movie ?label
+    GROUP BY ?movie ?name ?abstract
     ORDER BY DESC(COUNT(?movie))
     LIMIT 3
     """
@@ -82,4 +83,5 @@ def recommand_by_most_same(name=""):
     print(query)
     results = sparql_runner(dbpedia_sparql, query)
     recommands = recommand_result_processing(results)
+    print(recommands)
     return recommands

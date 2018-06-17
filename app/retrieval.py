@@ -90,3 +90,23 @@ def query_book_by_name(name=""):
     results = sparql_runner(dbpedia_sparql, query)
     result_processed = show_result_processing(results)
     return result_processed
+
+
+def query_videogame_by_name(name=""):
+    query = """
+    SELECT ?label ?abstract ?publisher_company ?kind_name ?releaseDate ?page
+     WHERE {
+        dbr:"""+name+""" rdfs:label ?label;
+                     dbo:abstract ?abstract;
+                     dbo:publisher ?publisher;
+                     dbo:genre     ?kind;
+                     dbo:releaseDate ?releaseDate;
+                     foaf:homepage  ?page.
+        ?publisher  foaf:name ?publisher_company.
+        ?kind       rdfs:label ?kind_name.
+        FILTER(LANG(?label)="zh" && LANG(?abstract)="zh" && LANG(?kind_name)="zh" )
+     }
+    """
+    results = sparql_runner(dbpedia_sparql, query)
+    result_processed = show_result_processing(results)
+    return result_processed

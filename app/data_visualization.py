@@ -192,6 +192,25 @@ def query_game_info ():
     return show_result_processing(results)
 
 
+def get_top10_gamecompany():
+    """
+    出品游戏最多的前十家游戏公司
+    :return: dict
+    """
+    query_vediogame_info = """
+         SELECT ?publisher_company COUNT(?video_game) AS ?game_of_nums
+         WHERE {
+            ?video_game  rdf:type dbo:VideoGame ;
+                         dbo:publisher ?publisher.
+            ?publisher  foaf:name ?publisher_company
+         }
+         GROUP BY ?publisher_company
+         ORDER BY DESC(COUNT(?video_game))
+         LIMIT 10
+    """
+    results = sparql_runner(dbpedia_sparql, query)
+    return show_result_processing(results)
+
 
 
 
