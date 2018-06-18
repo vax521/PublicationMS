@@ -38,6 +38,16 @@ def recommand_result_processing(results):
     return result_processed
 
 
+# 处理电影推荐模块的返回数据
+def movie_recommand_result_processing(results):
+    result_processed = {}
+    for result in results["results"]["bindings"]:
+        result_processed[result['filmTitle']['value']] = result['page']['value']
+    print(result_processed)
+    return result_processed
+
+
+
 #  处理数据可视化模块的数据 返回 value类型为list的字典
 def result_to_dict(results={}):
     finished_product = {}

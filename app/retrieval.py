@@ -10,6 +10,11 @@ from sparql_tools import *
 
 
 def query_movie_by_name(name=''):
+    """
+    通过名称检索电影
+    :param name:
+    :return:
+    """
     query = """
         PREFIX m: <http://data.linkedmdb.org/resource/movie/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -70,6 +75,11 @@ def query_movie_by_director():
 
 
 def query_book_by_name(name=""):
+    """
+    通过名称检索书籍
+    :param name:
+    :return:
+    """
     query = """
    SELECT ?thumbnail ?author ?kind ?country ?language ?comment ?links
     WHERE {
@@ -93,6 +103,11 @@ def query_book_by_name(name=""):
 
 
 def query_videogame_by_name(name=""):
+    """
+    通过名称检索电子游戏
+    :param name:
+    :return:
+    """
     query = """
     SELECT ?label ?abstract ?publisher_company ?kind_name ?releaseDate ?page
      WHERE {
