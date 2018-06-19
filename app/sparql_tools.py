@@ -17,12 +17,43 @@ def sparql_runner(sparql=dbpedia_sparql, query=''):
     return results
 
 
-# 处理返回的dict数据
-def result_processing(results):
+# 处理查询模块返回的dict数据，一对多的字典
+def show_result_processing(results):
     finished_product = {}
     for item in results['head']['vars']:
         a = set()
         for row in results['results']['bindings']:
             a.add(row[item]['value'])
+        finished_product[item] = a
+    return finished_product
+
+
+# 处理 推荐模块返回的dict数据，只抽取 label 字段
+def recommand_result_processing(results):
+
+    result_processed = {}
+    for result in results["results"]["bindings"]:
+        result_processed[result['name']['value']] = result['abstract']['value']
+    print(result_processed)
+    return result_processed
+
+
+# 处理电影推荐模块的返回数据
+def movie_recommand_result_processing(results):
+    result_processed = {}
+    for result in results["results"]["bindings"]:
+        result_processed[result['filmTitle']['value']] = result['page']['value']
+    print(result_processed)
+    return result_processed
+
+
+
+#  处理数据可视化模块的数据 返回 value类型为list的字典
+def result_to_dict(results={}):
+    finished_product = {}
+    for item in results['head']['vars']:
+        a = []
+        for row in results['results']['bindings']:
+            a.append(row[item]['value'])
         finished_product[item] = a
     return finished_product

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="72277c93-c1f6-44ec-a708-099363ed79de" name="Default" comment="" />
+=======
+    <list default="true" id="72277c93-c1f6-44ec-a708-099363ed79de" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/retrieval.py" afterPath="$PROJECT_DIR$/app/retrieval.py" />
+      <change beforePath="$PROJECT_DIR$/app/templates/show_result.html" afterPath="$PROJECT_DIR$/app/templates/show_result.html" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
+    </list>
+>>>>>>> 8d467afdf0ae3d32717499d6680ef0e4e3bf51e7
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +33,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="154">
               <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
@@ -32,6 +43,10 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="660">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+=======
             <state relative-caret-position="191">
               <caret line="25" column="94" lean-forward="true" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
               <folding />
@@ -44,12 +59,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117">
               <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
@@ -62,8 +78,13 @@
       <file leaf-file-name="retrieval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/retrieval.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="154">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+=======
             <state relative-caret-position="308">
               <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
               <folding />
             </state>
           </provider>
@@ -72,18 +93,31 @@
       <file leaf-file-name="sparql_tools.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/sparql_tools.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="616">
+              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+=======
             <state relative-caret-position="242">
               <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="21" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="data_visualization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/data_visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+=======
       <file leaf-file-name="recommend.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/recommend.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
               <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
               <folding />
             </state>
           </provider>
@@ -105,7 +139,11 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="836">
+=======
             <state relative-caret-position="365">
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
               <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding />
             </state>
@@ -160,10 +198,22 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
+=======
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="461" />
+    <option name="y" value="23" />
+    <option name="width" value="979" />
+    <option name="height" value="699" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+>>>>>>> 8d467afdf0ae3d32717499d6680ef0e4e3bf51e7
     <option name="x" value="355" />
     <option name="width" value="1085" />
     <option name="height" value="860" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -180,7 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -208,6 +257,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,7 +469,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+=======
+<<<<<<< HEAD
+    <frame x="461" y="23" width="979" height="699" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3046252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1297242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+>>>>>>> 8d467afdf0ae3d32717499d6680ef0e4e3bf51e7
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -430,6 +496,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.027777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -471,6 +538,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -479,6 +548,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
     <entry file="file://$PROJECT_DIR$/app/retrieval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -487,6 +557,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/app/data_visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -514,6 +586,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
     <entry file="file://$PROJECT_DIR$/app/recommend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -522,6 +595,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/data_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+=======
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -558,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
@@ -578,6 +658,13 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+          <folding />
+=======
     <entry file="file://$PROJECT_DIR$/app/data_visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -586,6 +673,7 @@
             <marker date="1529033606054" expanded="true" signature="1067:1471" ph="..." />
             <marker date="1529033606054" expanded="true" signature="1541:1806" ph="..." />
           </folding>
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
         </state>
       </provider>
     </entry>
@@ -693,7 +781,7 @@
     <entry file="file://$PROJECT_DIR$/app/forms.py" />
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="154">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
@@ -703,6 +791,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+<<<<<<< HEAD
+=======
         </state>
       </provider>
     </entry>
@@ -711,12 +801,17 @@
         <state relative-caret-position="159">
           <caret line="240" column="16" lean-forward="false" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
           <folding />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="836">
+=======
         <state relative-caret-position="365">
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding />
         </state>
@@ -733,50 +828,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/search.html">
+    <entry file="file://$PROJECT_DIR$/app/sparql_tools.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="66">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+=======
         <state relative-caret-position="191">
           <caret line="25" column="94" lean-forward="true" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/retrieval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+=======
     <entry file="file://$PROJECT_DIR$/app/recommend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/recommend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+=======
     <entry file="file://$PROJECT_DIR$/app/sparql_tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="21" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/data_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+=======
     <entry file="file://$PROJECT_DIR$/app/templates/show_result.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+=======
     <entry file="file://$PROJECT_DIR$/app/retrieval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+>>>>>>> 6ffccc556c5093e4b572b91a1f4521acaed434b9
           <folding />
         </state>
       </provider>

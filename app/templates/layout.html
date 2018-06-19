@@ -23,21 +23,46 @@
                 <li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
             </ul>
         </div>
-
-
     </div>
 </nav>
-<div class="container body-content">
-    {% block body %}{% endblock %}
+<div class="container col-md-offset-4 ">
+    <form class="navbar-form navbar-left" role="search"
+          id="search_form" action="{{ url_for('search') }}" method="post">
+        <div class="bg-info text-center">
+            <div class="radio-inline">
+                <label class="">
+                    <input type="radio" name="optionsRadios" id="optionsRadios1"
+                           value="option1" checked> Book
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2"
+                           value="option2"> Movie
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3"
+                           value="option3"> Game
+                </label>
+            </div>
+        </div>
+        <div class="form-group form-inline">
+            <input type="text" class="form-control input-group-lg" id="input" name="input" placeholder="search">
+        </div>
+        <button type="submit" class="btn btn-success" form="search_form">提交</button>
+    </form>
+</div>
+<div class="container-fluid">
+    {% block body %} {% endblock %}
 </div>
 
-<div class="container-fluid">
-</div>
 
 <!-footer-->
-<div class="footer text-center">
+<footer class="container-fluid foot-wrap text-center">
     <p>@Copyright 2018 </p>
-</div>
+</footer>
 
 
 <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
