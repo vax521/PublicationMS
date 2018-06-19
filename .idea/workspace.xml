@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72277c93-c1f6-44ec-a708-099363ed79de" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/retrieval.py" afterPath="$PROJECT_DIR$/app/retrieval.py" />
-      <change beforePath="$PROJECT_DIR$/app/templates/show_result.html" afterPath="$PROJECT_DIR$/app/templates/show_result.html" />
-    </list>
+    <list default="true" id="72277c93-c1f6-44ec-a708-099363ed79de" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +160,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="355" />
     <option name="width" value="1085" />
     <option name="height" value="860" />
@@ -422,7 +419,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
