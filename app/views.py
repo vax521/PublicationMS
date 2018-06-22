@@ -32,7 +32,7 @@ def search():
 @app.route('/')
 @app.route('/index')
 def index():
-    data = data_visualization.query_game_info()
+    data = data_visualization.get_director_movies()
     response = make_response(render_template("index.html", data=data))
     return response
 

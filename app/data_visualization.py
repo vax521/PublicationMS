@@ -27,6 +27,8 @@ def json_to_dict(results=""):
 """
   书籍信息统计部分
 """
+
+
 def get_all_author_num():
     """
     查询所有作者的数量
@@ -43,29 +45,48 @@ def get_all_author_num():
     return author_number
 
 
-def get_writer_info():
+def get_writer_gender():
     """
-     获取所有的作家信息  信息太多，响应慢，有待优化
+     获取所有的作家的性别信息
     # 姓名：foaf:name ?name;
     # 性别：foaf:gender
-    # 国籍：dbp:nationality ?nationality
-    # 简介：dbo:abstract ?abstract
     :return:dict
     """
-    query_writers_info = """
-    SELECT   ?name ?gender  ?nationality ?abstract
+    query_writers_gender = """
+    SELECT   ?gender COUNT(?gender) AS ?gender_nums 
      WHERE {
      ?author rdf:type dbo:Writer;
              foaf:name ?name;
-             foaf:gender ?gender;
-             dbp:nationality ?nationality;
-             dbo:abstract ?abstract.
+             foaf:gender ?gender.
      }
-     
+     GROUP BY ?gender
     """
-    print("获取所有的作家信息:")
-    print(query_writers_info)
-    results = sparql_runner(dbpedia_sparql, query_writers_info)
+    print("获取所有的作家性别信息:")
+    print(query_writers_gender)
+    results = sparql_runner(dbpedia_sparql, query_writers_gender)
+    return show_result_processing(results)
+
+
+def get_writer_nationality():
+    """
+     获取作家数量前10的国家
+    # 姓名：foaf:name ?name;
+    # 性别：foaf:gender
+    :return:dict
+    """
+    query_writers_nationality = """
+    SELECT   ?nationality COUNT(?author) AS ?author_nums 
+     WHERE {
+     ?author rdf:type dbo:Writer;
+             dbp:nationality ?nationality.
+     }
+     GROUP BY ?nationality
+     ORDER BY DESC(COUNT(?author))
+     LIMIT 10
+    """
+    print("获取所有的作家国别信息:")
+    print(query_writers_nationality)
+    results = sparql_runner(dbpedia_sparql, query_writers_nationality)
     return show_result_processing(results)
 
 
@@ -170,7 +191,7 @@ def get_director_movies():
 """
 
 
-def query_game_info ():
+def query_game_info():
     """
     查询游戏信息
     ?name 游戏名
@@ -198,17 +219,17 @@ def get_top10_gamecompany():
     :return: dict
     """
     query_vediogame_info = """
-         SELECT ?publisher_company COUNT(?video_game) AS ?game_of_nums
+         SELECT ?publisher_company COUNT(?video_game)  
          WHERE {
-            ?video_game  rdf:type dbo:VideoGame ;
+            ?video_game  rdf:type dbo:VideoGame;
                          dbo:publisher ?publisher.
-            ?publisher  foaf:name ?publisher_company
+            ?publisher  foaf:name ?publisher_company.
          }
          GROUP BY ?publisher_company
-         ORDER BY DESC(COUNT(?video_game))
+         ORDER BY DESC(COUNT(?video_game) )
          LIMIT 10
     """
-    results = sparql_runner(dbpedia_sparql, query)
+    results = sparql_runner(dbpedia_sparql, query_vediogame_info)
     return show_result_processing(results)
 
 
