@@ -3,4 +3,9 @@
 app/__pycache__/views.cpython-36.pyc
 .idea/workspace.xml
 .idea/PublicationMS.iml
+<<<<<<< HEAD
 *.pyc
+=======
+.idea/workspace.xml
+.idea/workspace.xml
+>>>>>>> 8dbd383ce44d50d6e3c3aaea98cbbed791c2e39c
