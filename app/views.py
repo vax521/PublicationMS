@@ -1,12 +1,28 @@
 import sys
 #  公司电脑
-# sys.path.append("E:/Code/PublicationMS/app")
-sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
-from flask import render_template, redirect, request, make_response
+sys.path.append("E:/Code/PublicationMS/app")
+# sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
+from flask import render_template, request, make_response, Response
+import json
 from app import app
 import retrieval
 import recommend
-import data_visualization
+from data_visualization import *
+
+
+class MyResponse(Response):
+    @classmethod
+    def force_type(cls, rv, environ=None):
+        if isinstance(rv, dict):
+            rv = jsonify(rv)
+        return super(MyResponse, cls).force_type(rv, environ)
+
+
+# Turn sets into lists before serializing, or use a custom default handler to do so:
+def set_default(obj):
+    if isinstance(obj, set):
+        return list(obj)
+    raise TypeError
 
 
 @app.route('/search', methods=['POST', 'GET'])
@@ -32,11 +48,26 @@ def search():
 @app.route('/')
 @app.route('/index')
 def index():
-    data = data_visualization.get_director_movies()
-    response = make_response(render_template("index.html", data=data))
+    response = make_response(render_template("index.html"))
     return response
 
 
-@app.route('/greet')
-def greet():
-    return render_template("greeting.html")
+@app.route('/get_book_info')
+def get_book_info():
+    result = dict()
+    result['nationality'] = get_writer_nationality()
+    result['notablework'] = get_notablework_num()
+    print(result)
+    # print(Response(result, mimetype='application/json'))
+    return json.dumps(result, default=set_default)
+
+
+@app.route('/get_movie_info')
+def get_movie_info():
+    result = dict()
+    result['country_movies'] = get_country_movies()
+    result['director_movies'] = get_director_movies()
+    print(result)
+    # print(Response(result, mimetype='application/json'))
+    return json.dumps(result, default=set_default)
+

@@ -2,5 +2,119 @@
 
 {% block title %}index{% endblock %}
 {% block body %}
-    <p>{{ data }}</p>
+    <div class="container-fluid col-md-offset-4">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default" onclick="show_book_info()">
+                <input type="radio" name="option"  id="book"  value="book" autocomplete="off"> 书籍信息
+            </label>
+            <label class="btn btn-default" onclick="show_movie_info()">
+                <input type="radio" name="option" id="movie" value="movie" autocomplete="off"> 电影信息
+            </label>
+            <label class="btn btn-default" onclick="show_game_info()">
+                <input type="radio" name="option" id="game" value="game" autocomplete="off"> 游戏信息
+            </label>
+        </div>
+    </div>
+    <div class="container-fluid ">
+       <div id="div1" style="height:200px;"></div>
+       <div id="div2" style="height:200px;"></div>
+       <div id="div3" style="height:200px;"></div>
+    </div>
+
+    <script type="text/javascript">
+
+     var nationalityChart = echarts.init(document.getElementById('div1'));
+     nationalityChart.setOption({
+       title :{
+            text:'作家国别统计'
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        tooltip:{},
+        legend:{
+          data:['作家国别统计']
+        },
+        series: [{
+                name :'作家国别统计',
+                type:'pie',
+                data: []
+       }]
+     });
+
+     var natableBookChart = echarts.init(document.getElementById('div2'));
+     natableBookChart.setOption({
+       title :{
+            text:'作家著名作品统计'
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        tooltip:{},
+        legend:{
+          data:['作家著名作品统计']
+        },
+            xAxis : {
+            data:[]
+        },
+        yAxis : {  type : 'value' },
+        series: [{
+                name :'作家著名作品统计',
+                type:'bar',
+                data: []
+            }]
+
+     });
+
+     function show_book_info() {
+         nationalityChart.showLoading();
+         natableBookChart.showLoading();
+         $.get("/get_book_info", function (data, status) {
+             //转换报文格式
+             var data = eval('(' + data + ')');
+             nationalityChart.hideLoading();
+             nationalityChart.setOption({
+                 series: [
+                     {
+                      data:data.nationality
+                     }
+                 ]
+             });
+
+              natableBookChart.hideLoading();
+               natableBookChart.setOption({
+                 xAxis: {
+                     data: data.notablework.author_name
+                 },
+                 series: [
+                     {
+                         data: data.notablework.work_nums
+                     }
+                 ]
+             });
+
+         });
+     }
+
+     function show_movie_info(){
+
+     }
+     function show_game_info() {
+
+     }
+
+    </script>
+
 {% endblock %}

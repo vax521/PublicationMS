@@ -1,7 +1,7 @@
 import sys
 #  公司电脑
-# sys.path.append("E:/Code/PublicationMS/app")
-sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
+sys.path.append("E:/Code/PublicationMS/app")
+# sys.path.append("/Users/xingxiaofei/PycharmProjects/PublicationMS/app")
 from sparql_tools import *
 
 query_movie_dirBySofia = """
