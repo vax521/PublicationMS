@@ -1,5 +1,5 @@
 # PublicationMS
-##Requirements
+## Requirements
   1.Flask==0.10.1
   2.Flask-Mail==0.9.1
   3.Jinja2==2.7.3
@@ -8,7 +8,7 @@
   6.pyecharts-javascripthon==0.0.6
   7.pyecharts-jupyter-installer==0.0.3
 
-##整体方案：
+## 整体方案：
 
         1.开发问题：
                 * 采用python技术栈，既支持http协议，也可支持脚本任务。
