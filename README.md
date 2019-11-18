@@ -2,7 +2,7 @@
 ## Requirements
   * Flask==0.10.1
   * Flask-Mail==0.9.1
-  * Jinja2==2.7.3
+  * Jinja2==2.10.1
   * SPARQLWrapper==1.8.2
   * pyecharts==0.5.5
   * pyecharts-javascripthon==0.0.6
